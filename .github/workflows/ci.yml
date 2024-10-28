@@ -1,0 +1,38 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [14, 16]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Node.js setup
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Hello World
+      run: echo "Hello World"
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+
+    - name: Build application
+      run: npm run build

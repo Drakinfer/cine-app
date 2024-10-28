@@ -1,0 +1,35 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 94vh; 
+  background-color: #f0f0f0;
+}
+
+.form-container {
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
+  color: green;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
