@@ -17,6 +17,7 @@ interface MovieDetailsModalProps {
 }
 
 const MovieDetailsModal: React.FC<MovieDetailsModalProps> = ({ movie, onClose, onAddToFavorites, isFavorite }) => {
+  // display a random trailer if movie has more than one
   const randomTrailer = movie.trailers.length > 0 ? movie.trailers[Math.floor(Math.random() * movie.trailers.length)] : null;
 
   return (

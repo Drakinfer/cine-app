@@ -11,6 +11,7 @@ const NavBar: React.FC = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
+  // state to handle burger menu opening on mobile screen
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };

@@ -9,6 +9,8 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState<string>('');
   const navigate = useNavigate();
 
+
+  // Check localStorage to see if informations given match
   const handleLogin = () => {
     const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
 

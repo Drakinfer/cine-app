@@ -1,3 +1,4 @@
+// a Mapping of all country with their code
 const languageMapping: { [key: string]: string } = {
   kw: 'Cornique',
   ff: 'Peul',

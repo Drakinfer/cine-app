@@ -3,6 +3,7 @@ import axios from 'axios';
 const API_KEY = '05f4fa4cf58c358bae85ab416f9924e0';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
+// get the 20 popular Movies regarding the filters given 
 export const fetchPopularMovies = async (filters: any = {}) => {
   try {
     const response = await axios.get(`${BASE_URL}/discover/movie`, {
@@ -23,6 +24,7 @@ export const fetchPopularMovies = async (filters: any = {}) => {
   }
 };
 
+// get the detail of a movie
 export const fetchMovieDetails = async (movieId: number) => {
   try {
     const response = await axios.get(`${BASE_URL}/movie/${movieId}`, {
@@ -38,6 +40,7 @@ export const fetchMovieDetails = async (movieId: number) => {
   }
 };
 
+// get the trailer of a movie
 export const fetchMovieVideos = async (movieId: number) => {
   try {
     const response = await axios.get(`${BASE_URL}/movie/${movieId}/videos`, {
@@ -53,6 +56,7 @@ export const fetchMovieVideos = async (movieId: number) => {
   }
 };
 
+// get movies genres list
 export const fetchGenres = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/genre/movie/list`, {
@@ -68,6 +72,7 @@ export const fetchGenres = async () => {
   }
 };
 
+// get languages list of the API
 export const fetchLanguages = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/configuration/languages`, {

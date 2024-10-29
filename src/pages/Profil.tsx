@@ -19,6 +19,7 @@ const Profil: React.FC = () => {
   const [updatedUser, setUpdatedUser] = useState<User | null>(null);
   const navigate = useNavigate();
 
+  // Load user information and his favorite movie list
   useEffect(() => {
     const userLoggedIn = localStorage.getItem('userLoggedIn');
     if (userLoggedIn) {

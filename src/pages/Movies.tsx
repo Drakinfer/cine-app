@@ -31,6 +31,7 @@ const Movies: React.FC = () => {
   });
   const navigate = useNavigate();
 
+  // get filters saved in LocaleStorage
   useEffect(() => {
     const savedFilters = localStorage.getItem('movieFilters');
     if (savedFilters) {
@@ -43,6 +44,7 @@ const Movies: React.FC = () => {
     }
   }, []); 
 
+  // get movies from API at loading and when filters change
   useEffect(() => {
     const userLoggedIn = localStorage.getItem('userLoggedIn');
 
@@ -109,6 +111,7 @@ const Movies: React.FC = () => {
     });
   };
 
+  // Open the modal for with selected movie information
   const openMovieDetails = async (movie: MovieDTO) => {
     const trailers = await fetchMovieVideos(movie.id);
     const youtubeTrailers = trailers
@@ -128,6 +131,7 @@ const Movies: React.FC = () => {
       setSelectedMovie(null);
     };
 
+    // add movie id to LocalStorage users favorites
     const addToFavorites = (movieId: number) => {
       const updatedFavorites = [...favorites, movieId];
       setFavorites(updatedFavorites);

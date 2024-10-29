@@ -16,6 +16,7 @@ const Register: React.FC = () => {
   const [password, setPassword] = useState<string>('');
   const navigate = useNavigate();
 
+  // handle form verification and save user to LocaleStorage
   const handleRegister = () => {
     if (!username || !email || !password) {
       alert('Veuillez remplir tous les champs.');

@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+# CineApp - README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CineApp is a movie management and visualization application built with React. It includes Docker for containerization and Electron for a desktop version. Users can register, log in, browse popular movies, add favorites, and filter movies by year, genre, and language.
+This is a school project.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+- Node.js (version 14 or higher)
+- Docker (for containerization)
+- Electron (for desktop application)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone this repository:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+   ```bash
+   git clone https://github.com/Drakinfer/cine-app
+   cd cine-app
+   ```
 
-### `npm test`
+2. Install Node.js Dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+3. Running the Application in Development Mode
+To start the application in development mode, run:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    Copier le code
+    npm start
+    ```
+This will start the development server and open the app in your default browser at http://localhost:3000 and launch electron, to open a electron browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Testing
+The app uses Jest for unit testing. To run the tests:
 
-### `npm run eject`
+```bash
+Copier le code
+npm test
+```
+Tests are set up to verify the main components' functionality, including login, registration, and movie display.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Additional Information
+* CI/CD Configuration: The app is set up for continuous integration with GitHub Actions. The CI/CD workflow file is located in .github/workflows/ci.yml.
+* Project Structure:
+    * src/: Contains React components and pages.
+    * public/: Contains static files.
+    * .github/workflows/: Contains configuration files for CI/CD.
+* Environment Variables: Make sure to configure necessary environment variables, such as API keys, in a .env file if required.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgments
+Thank you for using CineApp! Feel free to contribute by submitting PRs and issues.

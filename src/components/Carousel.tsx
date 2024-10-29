@@ -13,12 +13,15 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ movies, onMovieClick, onRemoveFavorite }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  // 5 movies visible on windows higher than 1024px, 1 under this size
   const moviesPerView = window.innerWidth < 1024 ? 1 : 5;
 
+  // handle previous page click
   const goToPrevPage = () => {
     setCurrentIndex((prev) => Math.max(prev - moviesPerView, 0));
   };
 
+  // handle next page click
   const goToNextPage = () => {
     setCurrentIndex((prev) =>
       Math.min(prev + moviesPerView, movies.length - moviesPerView)

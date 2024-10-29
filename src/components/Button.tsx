@@ -14,6 +14,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ label, onClick, navigateTo, type = 'button', styleClass = '' }) => {
   const navigate = useNavigate();
 
+  // handle if button is a navigation one or not.
   const handleClick = () => {
     if (navigateTo) {
       navigate(navigateTo);
